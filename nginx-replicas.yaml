@@ -20,6 +20,9 @@ spec:
           volumeMounts:
             - mountPath: /usr/share/nginx/html
               name: pv-storage
+            - mountPath: /etc/nginx/nginx.conf
+              name: nginx-config
+              subPath: nginx.conf
       volumes:
         - name: pv-storage
           persistentVolumeClaim:
